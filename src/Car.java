@@ -2,8 +2,8 @@ import java.util.Objects;
 
 public class Car {
     private String name;
-    private Integer year;
-    private Integer mileage;
+    private int year;
+    private int mileage;
 
     @Override
     public String toString() {
@@ -12,6 +12,12 @@ public class Car {
                 ", year=" + year +
                 ", mileage=" + mileage +
                 '}';
+    }
+
+    public Car(String name, int year, int mileage) {
+        this.name = name;
+        this.year = year;
+        this.mileage = mileage;
     }
 
     @Override
@@ -54,7 +60,7 @@ public class Car {
     }
 
     public Integer getMileage() {
-        return mileage;
+        return Math.toIntExact(mileage);
     }
 
     public void setMileage(Integer mileage) {
